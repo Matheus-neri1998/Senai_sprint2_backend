@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Matheus Neri\\OneDrive\\Área de Trabalho\\Senai_sprint1_bd\\Sprint-2_BackEnd_API\\Senai_filmes_webApi\\Senai_filmes_webApi\\Senai_filmes_webApi.csproj",
+      "projectUniqueName": "C:\\Users\\Matheus Neri\\OneDrive\\Área de Trabalho\\Senai_sprint2_backend\\API\\Senai_filmes_webApi\\Senai_filmes_webApi\\Senai_filmes_webApi.csproj",
       "projectName": "Senai_filmes_webApi",
-      "projectPath": "C:\\Users\\Matheus Neri\\OneDrive\\Área de Trabalho\\Senai_sprint1_bd\\Sprint-2_BackEnd_API\\Senai_filmes_webApi\\Senai_filmes_webApi\\Senai_filmes_webApi.csproj",
+      "projectPath": "C:\\Users\\Matheus Neri\\OneDrive\\Área de Trabalho\\Senai_sprint2_backend\\API\\Senai_filmes_webApi\\Senai_filmes_webApi\\Senai_filmes_webApi.csproj",
       "packagesPath": "C:\\Users\\Matheus Neri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Matheus Neri\\OneDrive\\Área de Trabalho\\Senai_sprint1_bd\\Sprint-2_BackEnd_API\\Senai_filmes_webApi\\Senai_filmes_webApi\\obj\\",
+      "outputPath": "C:\\Users\\Matheus Neri\\OneDrive\\Área de Trabalho\\Senai_sprint2_backend\\API\\Senai_filmes_webApi\\Senai_filmes_webApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Matheus Neri\\AppData\\Roaming\\NuGet\\NuGet.Config",
