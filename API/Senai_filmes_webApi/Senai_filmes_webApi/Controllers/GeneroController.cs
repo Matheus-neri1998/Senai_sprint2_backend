@@ -17,7 +17,7 @@ namespace Senai_filmes_webApi.Controllers
     [Produces("application/json")]
 
     // Define que a rota de uma requisição será no formato domínio/api/nomeController
-    // ex: http://localhost:5000/api/generos
+    // ex: http://localhost:5000/api/genero 
     [Route("api/[controller]")]
 
     // Define que é um controlador de API
@@ -42,6 +42,7 @@ namespace Senai_filmes_webApi.Controllers
         /// Lista todos os gêneros
         /// </summary>
         /// <returns>Uma lista de gêneros e um status code</returns>
+        /// http://localhost:5000/api/genero
         [HttpGet]
 
         public IActionResult Get()
@@ -52,6 +53,23 @@ namespace Senai_filmes_webApi.Controllers
             // Retorna o status code 200 (Ok) com a lista de gêneros no formato JSON
             return Ok(ListaGeneros);
         }
+
+        /// <summary>
+        /// Cadastra um novo gênero
+        /// </summary>
+        /// <returns >Retorna um status code 201 - Created </returns>
+        /// http://localhost:5000/api/genero
+        [HttpPost]
+
+        public IActionResult Post(GeneroDomain NovoGenero)
+        {
+            // Faz a chamada para o método Cadastrar
+            _generoRepository.Cadastrar(NovoGenero);
+
+            // Retorna um Status Code 201 - Created
+            return StatusCode(201);
+
+        } // Fim do endpoint "Post"
 
     } 
 }
