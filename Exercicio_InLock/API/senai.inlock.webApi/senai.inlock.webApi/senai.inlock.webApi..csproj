@@ -7,17 +7,15 @@
 
   <ItemGroup>
     <Compile Remove="Controllers\**" />
-    <Compile Remove="Repositories\**" />
     <Content Remove="Controllers\**" />
-    <Content Remove="Repositories\**" />
     <EmbeddedResource Remove="Controllers\**" />
-    <EmbeddedResource Remove="Repositories\**" />
     <None Remove="Controllers\**" />
-    <None Remove="Repositories\**" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
   </ItemGroup>
+
+
 
 </Project>
