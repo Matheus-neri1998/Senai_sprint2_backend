@@ -6,13 +6,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+    <Compile Remove="Controllers\**" />
+    <Compile Remove="Repositories\**" />
+    <Content Remove="Controllers\**" />
+    <Content Remove="Repositories\**" />
+    <EmbeddedResource Remove="Controllers\**" />
+    <EmbeddedResource Remove="Repositories\**" />
+    <None Remove="Controllers\**" />
+    <None Remove="Repositories\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Repositories\" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
   </ItemGroup>
 
 </Project>
