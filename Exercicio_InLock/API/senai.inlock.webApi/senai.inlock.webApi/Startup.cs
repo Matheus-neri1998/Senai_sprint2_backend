@@ -16,8 +16,23 @@ namespace senai.inlock.webApi_
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services
+                // Adiciona o serviços de Controllers
+                .AddControllers()
+                .AddNewtonsoftJson(options =>
+                {
+                    // Ignora os loopings nas consultas 
+                    options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore
 
-        }
+                });
+                
+
+
+
+
+        }   
+                
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

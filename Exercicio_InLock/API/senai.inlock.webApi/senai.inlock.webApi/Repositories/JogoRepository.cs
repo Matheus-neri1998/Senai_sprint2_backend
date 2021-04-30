@@ -64,12 +64,14 @@ namespace senai.inlock.webApi_.Repositories
 
                         };
 
+                        // Adiciona a lista de jogos
                         ListaJogos.Add(jogo);
 
                     }
                 }
             }
 
+            // Retorna uma lista de jogos
             return (ListaJogos);
             
         } // Fim do método ListarTodos

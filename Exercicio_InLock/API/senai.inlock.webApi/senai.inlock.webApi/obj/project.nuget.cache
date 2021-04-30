@@ -1,11 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "8VWueCAaf4GKyrthfwzZ0baBH5oPk+Cd8XBDr9d07SxUYPtlmBpBOle7htJcBFPiIGb7GDmDL0wLUP6k74Hkzw==",
+  "dgSpecHash": "mh5qbN4HAX9iCehYw/YuWFPtKY8BpsEvFPT4tti/HgcaPJK1m31/XT2QZxCxccH+1NAjCUEnddljRJgG1GH0zw==",
   "success": true,
   "projectFilePath": "C:\\Users\\36773915805\\Desktop\\Senai_sprint2_backend\\Exercicio_InLock\\API\\senai.inlock.webApi\\senai.inlock.webApi\\senai.inlock.webApi..csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\36773915805\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.5\\microsoft.aspnetcore.jsonpatch.5.0.5.nupkg.sha512",
+    "C:\\Users\\36773915805\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.5\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.5.nupkg.sha512",
+    "C:\\Users\\36773915805\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\36773915805\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\36773915805\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\36773915805\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\36773915805\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\36773915805\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\36773915805\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\36773915805\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
