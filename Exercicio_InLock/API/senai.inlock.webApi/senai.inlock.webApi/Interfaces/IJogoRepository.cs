@@ -8,6 +8,7 @@ namespace senai.inlock.webApi_.Interfaces
 {
     interface IJogoRepository
     {
+        
         /// <summary>
         /// Lista todos os jogos
         /// </summary>
@@ -21,3 +22,4 @@ namespace senai.inlock.webApi_.Interfaces
         void Cadastrar(JogoDomain novoJogo);
     }
 }
+

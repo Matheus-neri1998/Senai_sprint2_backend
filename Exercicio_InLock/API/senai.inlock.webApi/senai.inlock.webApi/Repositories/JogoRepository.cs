@@ -10,6 +10,7 @@ namespace senai.inlock.webApi_.Repositories
 {
     public class JogoRepository : IJogoRepository
     {
+
         private string StringConnection = "Data Source=MATHEUSNOTE\\SQLEXPRESS; initial catalog=InLock; integrated security=true";
         public void Cadastrar(JogoDomain novoJogo)
         {
@@ -20,14 +21,14 @@ namespace senai.inlock.webApi_.Repositories
                 using (SqlCommand cmd = new SqlCommand(InsertQuery, con))
                 {
 
-                        cmd.Parameters.AddWithValue("Titulo", novoJogo.NomeJogo);
+                    cmd.Parameters.AddWithValue("Titulo", novoJogo.NomeJogo);
 
-                        con.Open();
+                    con.Open();
 
-                        cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
 
                 }
-                
+
             }
         } // Fim do método Cadastrar
 
@@ -73,7 +74,8 @@ namespace senai.inlock.webApi_.Repositories
 
             // Retorna uma lista de jogos
             return (ListaJogos);
-            
+
         } // Fim do método ListarTodos
-    }
+
+    } // Fim de JogoRepository
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai.inlock.webApi_.Domains;
 using senai.inlock.webApi_.Interfaces;
@@ -30,6 +31,16 @@ namespace senai.inlock.webApi_.Controllers
             _jogoRepository.Cadastrar(novoJogo);
 
             return StatusCode(201);
+        }
+
+        [Authorize(Roles = "Administrador")] // Autorizado pelo administrador
+        [HttpGet]
+
+        public IActionResult Get()
+        {
+            List<JogoDomain> ListaJogos = _jogoRepository.ListarTodos();
+
+            return Ok(ListaJogos); // Retorna uma lista de jogos
         }
     }
 }

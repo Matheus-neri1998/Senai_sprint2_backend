@@ -39,7 +39,7 @@ namespace senai.inlock.webApi_.Repositories
 
 
                         return UsuarioBuscado;
-                        
+
 
                     }
 
@@ -49,5 +49,5 @@ namespace senai.inlock.webApi_.Repositories
 
             }
         }
-    }
+    } // Fim de UsuarioRepository
 }
