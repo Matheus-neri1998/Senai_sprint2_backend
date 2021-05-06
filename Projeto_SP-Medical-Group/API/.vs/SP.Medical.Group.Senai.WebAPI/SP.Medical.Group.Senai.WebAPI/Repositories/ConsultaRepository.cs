@@ -38,7 +38,7 @@ namespace SP.Medical.Group.Senai.WebAPI.Repositories
                 .Include(c => c.DescricaoNavigation)
                 .FirstOrDefault(c => c.IdConsulta == id);
 
-                switch (id)
+                switch (status)
                 {
                     case "1":
                         consultaBuscada.IdSituacao = 1; // Agendada
@@ -82,9 +82,22 @@ namespace SP.Medical.Group.Senai.WebAPI.Repositories
             ctx.SaveChanges();
         }
 
-        public List<Consulta> Listar()
+        public List<Consulta> Listar(int id)
         {
-            throw new NotImplementedException();
+            return ctx.Consultas
+
+            .Include(c => c.IdConsultaNavigation)
+
+            .Include(c => c.IdMedicoNavigation)
+
+            .Include(c => c.IdPacienteNavigation)
+
+            .Include(c => c.IdSituacaoNavigation)
+
+            .Where(c => c.IdSituacao == id)
+            .ToList();
+
+            
         }
     }
 }

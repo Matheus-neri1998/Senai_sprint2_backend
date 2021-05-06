@@ -21,5 +21,6 @@ namespace SP.Medical.Group.Senai.WebAPI.Domains
         public object DataConsultaNavigation { get; internal set; }
         public object HorarioNavigation { get; internal set; }
         public object DescricaoNavigation { get; internal set; }
+        public object IdConsultaNavigation { get; internal set; }
     }
 }
