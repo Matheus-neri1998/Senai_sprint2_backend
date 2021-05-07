@@ -11,14 +11,19 @@ namespace SP.Medical.Group.Senai.WebAPI.Interfaces
     /// </summary>
     interface IConsultaRepository
     {
-        List<Consulta> Listar(int id);
+        List<Consulta> Listar();
 
         Consulta BuscarPorId(int id);
 
         void Cadastrar(Consulta NovaConsulta);
 
-        void Atualizar(int id, string status);
+        void Atualizar(int id, Consulta ConsultaAtualizada);
+        void AtualizarStatus(int id, string status);
 
         void Deletar(int id);
+
+        List<Consulta> ListarMinhas(int IdUsuario);
+
+        void Prontuario(int id, Consulta NovoProntuario);
     }
 }

@@ -19,8 +19,42 @@ namespace SP.Medical.Group.Senai.WebAPI.Repositories
         /// </summary>
         SPMedicalGroupContext ctx = new SPMedicalGroupContext();
 
+        public void Atualizar(int id, Consulta ConsultaAtualizada)
+        {
+            Consulta ConsultaBuscada = ctx.Consultas.Find(id);
 
-        public void Atualizar(int id, string status)
+            if (ConsultaAtualizada.IdMedico != null)
+            {
+                ConsultaBuscada.IdMedico = ConsultaAtualizada.IdMedico;
+            }
+
+            if (ConsultaAtualizada.IdPaciente != null)
+            {
+                ConsultaBuscada.IdPaciente = ConsultaAtualizada.IdPaciente;
+            }
+
+            if (ConsultaAtualizada.IdSituacao != null)
+            {
+                ConsultaBuscada.IdSituacao = ConsultaAtualizada.IdSituacao;
+            }
+
+            if (ConsultaAtualizada.DataConsulta > DateTime.Now)
+            {
+                ConsultaBuscada.DataConsulta = ConsultaAtualizada.DataConsulta;
+            }
+
+            if (ConsultaAtualizada.Horario != null)
+            {
+                ConsultaBuscada.Horario = ConsultaAtualizada.Horario;
+            }
+
+            if (ConsultaAtualizada.Descricao != null)
+            {
+                ConsultaBuscada.Descricao = ConsultaAtualizada.Descricao;
+            }
+        }
+
+        public void AtualizarStatus(int id, string permissao)
         {
             // Busca a primeira situação para o Id informado e armazena no objeto "situacaoBuscada"
             Consulta consultaBuscada = ctx.Consultas
@@ -31,14 +65,9 @@ namespace SP.Medical.Group.Senai.WebAPI.Repositories
 
                 .Include(c => c.IdSituacaoNavigation)
 
-                .Include(c => c.DataConsultaNavigation)
-
-                .Include(c => c.HorarioNavigation)
-
-                .Include(c => c.DescricaoNavigation)
                 .FirstOrDefault(c => c.IdConsulta == id);
 
-                switch (status)
+                switch (permissao)
                 {
                     case "1":
                         consultaBuscada.IdSituacao = 1; // Agendada
@@ -58,6 +87,9 @@ namespace SP.Medical.Group.Senai.WebAPI.Repositories
 
                 } // Fim de Switch Case
 
+            ctx.Consultas.Update(consultaBuscada);
+
+            ctx.SaveChanges();
             
         }
 
@@ -82,7 +114,12 @@ namespace SP.Medical.Group.Senai.WebAPI.Repositories
             ctx.SaveChanges();
         }
 
-        public List<Consulta> Listar(int id)
+        public List<Consulta> Listar()
+        {
+            return ctx.Consultas.ToList();
+        }
+
+        public List<Consulta> ListarMinhas(int IdUsuario)
         {
             return ctx.Consultas
 
@@ -94,10 +131,23 @@ namespace SP.Medical.Group.Senai.WebAPI.Repositories
 
             .Include(c => c.IdSituacaoNavigation)
 
-            .Where(c => c.IdSituacao == id)
+            .Where(c => c.IdSituacao == IdUsuario)
             .ToList();
 
-            
+        }
+
+        public void Prontuario(int id, Consulta NovoProntuario)
+        {
+            Consulta ConsultaBuscada = ctx.Consultas.Find(id);
+
+            if (NovoProntuario.Descricao != null)
+            {
+                ConsultaBuscada.Descricao = NovoProntuario.Descricao;
+            }
+
+            ctx.Consultas.Update(ConsultaBuscada);
+
+            ctx.SaveChanges();
         }
     }
 }

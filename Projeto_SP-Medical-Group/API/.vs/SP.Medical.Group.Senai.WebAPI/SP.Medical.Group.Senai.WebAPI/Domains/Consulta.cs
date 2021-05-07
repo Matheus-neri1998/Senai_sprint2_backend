@@ -12,7 +12,7 @@ namespace SP.Medical.Group.Senai.WebAPI.Domains
         public int? IdPaciente { get; set; }
         public int? IdSituacao { get; set; }
         public DateTime DataConsulta { get; set; }
-        public TimeSpan Horario { get; set; }
+        public string Horario { get; set; }
         public string Descricao { get; set; }
 
         public virtual Medico IdMedicoNavigation { get; set; }

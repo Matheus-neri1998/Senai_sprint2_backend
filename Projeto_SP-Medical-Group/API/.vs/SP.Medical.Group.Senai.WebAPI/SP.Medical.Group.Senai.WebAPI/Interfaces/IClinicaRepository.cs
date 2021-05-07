@@ -17,7 +17,7 @@ namespace SP.Medical.Group.Senai.WebAPI.Interfaces
 
         void Cadastrar(Clinica NovaClinica);
 
-        void Atualizar(int id, string status);
+        void Atualizar(int id, Clinica NovaClinica);
 
         void Deletar(int id);
     }
